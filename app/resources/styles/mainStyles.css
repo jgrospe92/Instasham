@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+html {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fcfcfc;
+}
+
+main {
+  height: 100%;
+  padding-top: 4rem;
+}
+
+header {
+  padding: 5px 30px 5px 30px;
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  background: rgb(165,165,236);
+  background: linear-gradient(-45deg, rgba(165,165,236,0.5) 50%, rgba(0,212,255,0.5) 100%);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header img {
+  width: auto;
+  height: 100%;
+}
+.profileLink :is(a, img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+.tabLink {
+  height:100%;
+  transform: scale(1.0);
+  transition: all 0.5s;
+  aspect-ratio: 1 / 1;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.4));
+}
+.tabLink:hover {
+  transform: scale(1.2);
+}
+
+.tabLinks {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+/* search bar */
+.searchBar {
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+.searchBar input {
+  position: relative;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10vh;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-right: 12%;
+}
+.searchBar input:focus {
+  outline: none;
+}
+.searchBar img {
+  height: 15px;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 50%;
+  cursor: pointer;
+}
+.searchOutput {
+  display: flex;
+  width: 60%;
+  height: 40%;
+  position:fixed;
+  top: 10%;
+  left: 20%;
+  border: 1px rgb(230, 230, 230) solid;
+  box-shadow: 0 0 5px #888888;
+  overflow:auto;
+  overflow-x:hidden;
+  background-color: white;
+  scroll-snap-type: y mandatory;
+}
+
+.searchPublicationsDivision {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.searchPublicationDiv {
+  display:flex;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align:start;
+}
+
+.searchImgDiv {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.searchImgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.searchCaptionDiv {
+  flex-grow:1;
+  display: flex;
+  padding: 1vw;
+}
+.searchCaptionDiv img {
+  height: 20%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.searchCaptionContent {
+  flex-grow:1;
+  padding-left:1vw;
+  display:flex;
+  flex-direction: column;
+}
+
+
+
+
+
+.createPostLink {
+  cursor: pointer;
+}
+.backgroundFilters {
+  filter: blur(13px);
+  pointer-events: none;
+  user-select: none;
+  overflow:hidden;
+}
+.notificationsLink {
+  cursor: pointer;
+}
+
+
+
