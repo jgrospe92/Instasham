@@ -4,16 +4,6 @@
     class Profile extends \app\core\Controller {
 
         #[\app\filters\Login]
-	    public function index(){
-        $publication = new \app\models\Publication();
-        $publication = $publication->getByProfileId($_SESSION['profile_id']);
-        unlink("images/publications/$publication->picture");
-        $publication->picture;
-        $publication->remove();
-        header('location:/Main/index');
-	}
-
-        #[\app\filters\Login]
         public function viewProfile($profile_id) {
             $profile = new \app\models\Profile();
             $profile = $profile->get($profile_id);
